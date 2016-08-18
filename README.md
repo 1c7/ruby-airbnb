@@ -1,10 +1,10 @@
 # Ruby 代码风格指南
 
-这是 Airbnb 的 Ruby 代码风格指南.
+这是 Airbnb 的 Ruby 代码风格指南。
 
-这份指南的灵感来自于 [Github 的指南](https://web.archive.org/web/20160410033955/https://github.com/styleguide/ruby) 和 [Bozhidar Batsov 的指南][bbatsov-ruby].
+这份指南的灵感来自于 [Github 的指南](https://web.archive.org/web/20160410033955/https://github.com/styleguide/ruby) 和 [Bozhidar Batsov 的指南][bbatsov-ruby]。
 
-Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
+Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript]。
 
 ## 内容表 (Table of Contents)
   1. [空格 (Whitespace)](#空格-whitespace)
@@ -41,9 +41,9 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
 
 ### 缩进 (Indentation)
 
-* <a name="default-indentation"></a>始终用 2 个空格做缩进.<sup>[[link](#default-indentation)]</sup>
+* <a name="default-indentation"></a>始终用 2 个空格做缩进。<sup>[[link](#default-indentation)]</sup>
 
-* <a name="indent-when-as-case"></a> `when` 的缩进和 `case` 一致.
+* <a name="indent-when-as-case"></a> `when` 的缩进和 `case` 一致。
     <sup>[[link](#indent-when-as-case)]</sup>
 
     ```ruby
@@ -68,16 +68,16 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
            end
     ```
 
-* <a name="align-function-params"></a>函数的参数要么全部在同一行, 如果参数要分成多行, 则每行一个参数, 相同缩进.<sup>[[link](#align-function-params)]</sup>
+* <a name="align-function-params"></a>函数的参数要么全部在同一行，如果参数要分成多行，则每行一个参数， 相同缩进。<sup>[[link](#align-function-params)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     def self.create_translation(phrase_id, phrase_key, target_locale,
                                 value, user_id, do_xss_check, allow_verification)
       ...
     end
 
-    # 好
+    # 正确
     def self.create_translation(phrase_id,
                                 phrase_key,
                                 target_locale,
@@ -88,7 +88,7 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
       ...
     end
 
-    # 好
+    # 正确
     def self.create_translation(
       phrase_id,
       phrase_key,
@@ -105,14 +105,14 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
 * <a name="indent-multi-line-bool"></a>多行的布尔表达式, 下一行缩进一下.<sup>[[link](#indent-multi-line-bool)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     def is_eligible?(user)
       Trebuchet.current.launch?(ProgramEligibilityHelper::PROGRAM_TREBUCHET_FLAG) &&
       is_in_program?(user) &&
       program_not_expired
     end
 
-    # 好
+    # 正确
     def is_eligible?(user)
       Trebuchet.current.launch?(ProgramEligibilityHelper::PROGRAM_TREBUCHET_FLAG) &&
         is_in_program?(user) &&
@@ -129,10 +129,10 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
     <sup>[[link](#space-before-comments)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     result = func(a, b)# we might want to change b to c
 
-    # 好
+    # 正确
     result = func(a, b) # we might want to change b to c
     ```
 
@@ -157,10 +157,10 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
     <sup>[[link](#spaces-block-params")]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     {}.each { | x,  y |puts x }
 
-    # 好
+    # 正确
     {}.each { |x, y| puts x }
     ```
 
@@ -183,20 +183,20 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
     字符串插值时候忽略空格.<sup>[[link](#no-spaces-string-interpolation)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     var = "This #{ foobar } is interpolated."
 
-    # 好
+    # 正确
     var = "This #{foobar} is interpolated."
     ```
 
 * <a name="no-spaces-range-literals"></a>当表达范围时, 不要写额外的空格.<sup>[[link](#no-spaces-range-literals)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     (0 ... coll).each do |item|
 
-    # 好
+    # 正确
     (0...coll).each do |item|
     ```
 
@@ -227,7 +227,7 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
     <sup>[[link](#newline-different-indent)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     class Foo
 
       def bar
@@ -236,7 +236,7 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript].
 
     end
 
-    # 好
+    # 正确
     class Foo
       def bar
         # body omitted
@@ -414,13 +414,13 @@ end
   <sup>[[link](#no-block-comments)]</sup>
 
   ```ruby
-  # 不好
+  # 错误
   =begin
   comment line
   another comment line
   =end
 
-  # 好
+  # 正确
   # comment line
   # another comment line
   ```
@@ -448,13 +448,13 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 每次你写 TODO 注释的时候加上你的名字.    
 
 ```ruby
-  # 不好
+  # 错误
   # TODO(RS): Use proper namespacing for this constant.
 
-  # 不好
+  # 错误
   # TODO(drumm3rz4lyfe): Use proper namespacing for this constant.
 
-  # 好
+  # 正确
   # TODO(Ringo Starr): Use proper namespacing for this constant.
 ```
 
@@ -482,12 +482,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="no-default-args"></a>不要用默认参数, 用一个选项 hash 来做这个事.<sup>[[link](#no-default-args)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     def obliterate(things, gently = true, except = [], at = Time.now)
       ...
     end
 
-    # 好
+    # 正确
     def obliterate(things, options = {})
       default_options = {
         :gently => true, # obliterate with soft-delete
@@ -504,10 +504,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#no-single-line-methods)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     def too_much; something; something_else; end
 
-    # 好
+    # 正确
     def some_method
       # body
     end
@@ -521,40 +521,40 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#returns-val-parens)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     @current_user = User.find_by_id 1964192
 
-    # 好
+    # 正确
     @current_user = User.find_by_id(1964192)
     ```
 
 * <a name="first-arg-parens"></a>如果第一个参数需要圆括号.<sup>[[link](#first-arg-parens)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     put! (x + y) % len, value
 
-    # 好
+    # 正确
     put!((x + y) % len, value)
     ```
 
 * <a name="space-method-call"></a>方法名和左括号之间永远不要放空格.<sup>[[link](#space-method-call)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     f (3 + 2) + 1
 
-    # 好
+    # 正确
     f(3 + 2) + 1
     ```
 
 * <a name="no-args-parens"></a> 对于不用接收参数的方法, **忽略圆括号** .<sup>[[link](#no-args-parens)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     nil?()
 
-    # 好
+    # 正确
     nil?
     ```
 
@@ -576,10 +576,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#options-no-braces)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     get '/v1/reservations', { :id => 54875 }
 
-    # 好
+    # 正确
     get '/v1/reservations', :id => 54875
     ```
 
@@ -591,12 +591,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#multiline-if-then)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     if some_condition then
       ...
     end
 
-    # 好
+    # 正确
     if some_condition
       ...
     end
@@ -605,7 +605,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="multiline-while-until"></a> `do` 不要和多行的 `while` 或 `until`搭配使用.<sup>[[link](#multiline-while-until)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     while x > 5 do
       ...
     end
@@ -614,7 +614,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
       ...
     end
 
-    # 好
+    # 正确
     while x > 5
       ...
     end
@@ -632,7 +632,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#only-simple-if-unless)]</sup>
 
     ```ruby
-    # 不好 - 一行塞不下
+    # 错误 - 一行塞不下
     add_trebuchet_experiments_on_page(request_opts[:trebuchet_experiments_on_page]) if request_opts[:trebuchet_experiments_on_page] && !request_opts[:trebuchet_experiments_on_page].empty?
 
     # 还行
@@ -642,7 +642,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
       add_trebuchet_experiments_on_page(request_opts[:trebuchet_experiments_on_page])
     end
 
-    # 不好 - 这个很复杂,需要写成多行,而且需要注释
+    # 错误 - 这个很复杂,需要写成多行,而且需要注释
     parts[i] = part.to_i(INTEGER_BASE) if !part.nil? && [0, 2, 3].include?(i)
 
     # 还行
@@ -652,14 +652,14 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="no-unless-with-else"></a>不要把 `unless` 和 `else` 搭配使用.<sup>[[link](#no-unless-with-else)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     unless success?
       puts 'failure'
     else
       puts 'success'
     end
 
-    # 好
+    # 正确
     if success?
       puts 'success'
     else
@@ -671,7 +671,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     .<sup>[[link](#unless-with-multiple-conditions)]</sup>
 
     ```ruby
-      # 不好
+      # 错误
       unless foo? && bar?
         ...
       end
@@ -686,12 +686,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#parens-around-conditions)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     if (x > 10)
       ...
     end
 
-    # 好
+    # 正确
     if x > 10
       ...
     end
@@ -704,10 +704,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     对于单行的条件, 用三元操作符(`?:`) 而不是 `if/then/else/end`.<sup>[[link](#avoid-complex-ternary)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     result = if some_condition then something else something_else end
 
-    # 好
+    # 正确
     result = some_condition ? something : something_else
     ```
 
@@ -715,10 +715,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     `if/else`.<sup>[[link](#no-nested-ternaries)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     some_condition ? (nested_condition ? nested_something : nested_something_else) : something_else
 
-    # 好
+    # 正确
     if some_condition
       nested_condition ? nested_something : nested_something_else
     else
@@ -733,11 +733,11 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#no-multiline-ternaries)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     some_really_long_condition_that_might_make_you_want_to_split_lines ?
       something : something_else
 
-    # 好
+    # 正确
     if some_really_long_condition_that_might_make_you_want_to_split_lines
       something
     else
@@ -754,12 +754,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     ```ruby
     arr = [1, 2, 3]
 
-    # 不好
+    # 错误
     for elem in arr do
       puts elem
     end
 
-    # 好
+    # 正确
     arr.each { |elem| puts elem }
     ```
 
@@ -772,28 +772,28 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     ```ruby
     names = ["Bozhidar", "Steve", "Sarah"]
 
-    # 好
+    # 正确
     names.each { |name| puts name }
 
-    # 不好
+    # 错误
     names.each do |name| puts name end
 
-    # 好
+    # 正确
     names.each do |name|
       puts name
       puts 'yay!'
     end
 
-    # 不好
+    # 错误
     names.each { |name|
       puts name
       puts 'yay!'
     }
 
-    # 好
+    # 正确
     names.select { |name| name.start_with?("S") }.map { |name| name.upcase }
 
-    # 不好
+    # 错误
     names.select do |name|
       name.start_with?("S")
     end.map { |name| name.upcase }
@@ -805,7 +805,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="self-assignment"></a>尽可能用短的自赋值操作符 (self assignment operators).<sup>[[link](#self-assignment)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     x = x + y
     x = x * y
     x = x**y
@@ -813,7 +813,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     x = x || y
     x = x && y
 
-    # 好
+    # 正确
     x += y
     x *= y
     x **= y
@@ -825,11 +825,11 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="semicolons"></a>避免用分号. 除非是单行 class 定义的情况下. 而且当使用分号时, 分号前面不应该有空格.<sup>[[link](#semicolons)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     puts 'foobar'; # 多余的分号
     puts 'foo'; puts 'bar' # 两个表达式放到一行
 
-    # 好
+    # 正确
     puts 'foobar'
 
     puts 'foo'
@@ -843,11 +843,11 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     普通方法调用就不要使用 :: 了.<sup>[[link](#colon-use)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     SomeClass::some_method
     some_object::some_method
 
-    # 好
+    # 正确
     SomeClass.some_method
     some_object.some_method
     SomeModule::SomeClass::SOME_CONST
@@ -858,12 +858,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#redundant-return)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     def some_method(some_arr)
       return some_arr.size
     end
 
-    # 好
+    # 正确
     def some_method(some_arr)
       some_arr.size
     end
@@ -872,17 +872,17 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="assignment-in-conditionals"></a>条件语句里不要用返回值<sup>[[link](#assignment-in-conditionals)]</sup>
 
     ```ruby
-    # 不好 - shows intended use of assignment
+    # 错误 - shows intended use of assignment
     if (v = array.grep(/foo/))
       ...
     end
 
-    # 不好
+    # 错误
     if v = array.grep(/foo/)
       ...
     end
 
-    # 好
+    # 正确
     v = array.grep(/foo/)
     if v
       ...
@@ -902,10 +902,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     (想象下如果值刚好是 `false` 会咋样.)<sup>[[link](#no-double-pipes-for-bools)]</sup>
 
     ```ruby
-    # 不好 - would set enabled to true even if it was false
+    # 错误 - would set enabled to true even if it was false
     enabled ||= true
 
-    # 好
+    # 正确
     enabled = true if enabled.nil?
     ```
 
@@ -913,10 +913,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#lambda-calls)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     lambda.(x, y)
 
-    # 好
+    # 正确
     lambda.call(x, y)
     ```
 
@@ -927,11 +927,11 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#single-action-blocks)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     bluths.map { |bluth| bluth.occupation }
     bluths.select { |bluth| bluth.blue_self? }
 
-    # 好
+    # 正确
     bluths.map(&:occupation)
     bluths.select(&:blue_self?)
     ```
@@ -939,12 +939,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="redundant-self"></a>当调用当前实例的某个方法时, 尽量用 `some_method` 而不是 `self.some_method`.<sup>[[link](#redundant-self)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     def end_date
       self.start_date + self.nights
     end
 
-    # 好
+    # 正确
     def end_date
       start_date + nights
     end
@@ -1012,12 +1012,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 
     ```ruby
     class TestClass
-      # 不好
+      # 错误
       def TestClass.some_method
         ...
       end
 
-      # 好
+      # 正确
       def self.some_other_method
         ...
       end
@@ -1028,7 +1028,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 
     ```ruby
     class TestClass
-      # 不好
+      # 错误
       class << self
         def first_method
           ...
@@ -1039,7 +1039,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
         end
       end
 
-      # 好
+      # 正确
       class << self
         attr_accessor :per_page
         alias_method :nwo, :find_by_name_with_owner
@@ -1077,14 +1077,14 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#exception-flow-control)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     begin
       n / d
     rescue ZeroDivisionError
       puts "Cannot divide by 0!"
     end
 
-    # 好
+    # 正确
     if d.zero?
       puts "Cannot divide by 0!"
     else
@@ -1096,14 +1096,14 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#dont-rescue-exception)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     begin
       # an exception occurs here
     rescue Exception
       # exception handling
     end
 
-    # 好
+    # 正确
     begin
       # an exception occurs here
     rescue StandardError
@@ -1121,10 +1121,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="redundant-exception"></a>传 2 个参数调 raise 异常时不要明确指明`RuntimeError`. 尽量用 error 子类这样比较清晰和明确.<sup>[[link](#redundant-exception)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     raise RuntimeError, 'message'
 
-    # 好一点 - RuntimeError 是默认的
+    # 正确一点 - RuntimeError 是默认的
     raise 'message'
 
     # 最好
@@ -1136,10 +1136,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#rescue-as-modifier)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     read_file rescue handle_error($!)
 
-    # 好
+    # 正确
     begin
       read_file
     rescue Errno:ENOENT => ex
@@ -1166,15 +1166,15 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#empty-collection-literals)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     arr = Array.new
     hash = Hash.new
 
-    # 好
+    # 正确
     arr = []
     hash = {}
 
-    # 好, 因为构造函数需要参数
+    # 正确, 因为构造函数需要参数
     x = Hash.new { |h, k| h[k] = {} }
     ```
 
@@ -1182,11 +1182,11 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#array-join)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     %w(one two three) * ', '
     # => 'one, two, three'
 
-    # 好
+    # 正确
     %w(one two three).join(', ')
     # => 'one, two, three'
     ```
@@ -1195,20 +1195,20 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#symbol-keys)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
 
-    # 好
+    # 正确
     hash = { :one => 1, :two => 2, :three => 3 }
     ```
 
 * <a name="symbol-literals"></a>如果可以的话, 用普通的 symbol 而不是字符串 symbol.<sup>[[link](#symbol-literals)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     :"symbol"
 
-    # 好
+    # 正确
     :symbol
     ```
 
@@ -1218,11 +1218,11 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#deprecated-hash-methods")</sup>
 
     ```ruby
-    # 不好
+    # 错误
     hash.has_key?(:test)
     hash.has_value?(value)
 
-    # 好
+    # 正确
     hash.key?(:test)
     hash.value?(value)
     ```
@@ -1244,10 +1244,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="array-trailing-comma"></a>如果是多行数组, 用逗号结尾<sup>[[link](#array-trailing-comma)]</sup>
 
     ```ruby
-    # 好
+    # 正确
     array = [1, 2, 3]
 
-    # 好
+    # 正确
     array = [
       "car",
       "bear",
@@ -1261,10 +1261,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 * <a name="string-interpolation"></a>尽量使用字符串插值, 而不是字符串拼接:<sup>[[link](#string-interpolation)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     email_with_name = user.name + ' <' + user.email + '>'
 
-    # 好
+    # 正确
     email_with_name = "#{user.name} <#{user.email}>"
     ```
 
@@ -1289,7 +1289,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     这种用加号的语法会创建一堆新的字符串对象.<sup>[[link](#string-concatenation)]</sup>
 
     ```ruby
-    # 好而且快
+    # 正确而且快
     html = ''
     html << '<h1>Page title</h1>'
 
@@ -1303,14 +1303,14 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#multi-line-strings)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     "Some string is really long and " +
       "spans multiple lines."
 
     "Some string is really long and " <<
       "spans multiple lines."
 
-    # 好
+    # 正确
     "Some string is really long and " \
       "spans multiple lines."
     ```
@@ -1321,12 +1321,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#regex-named-groups)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     /(regexp)/ =~ string
     ...
     process $1
 
-    # 好
+    # 正确
     /(?<meaningful_var>regexp)/ =~ string
     ...
     process meaningful_var
@@ -1360,12 +1360,12 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
    因为它的行为更接近于一个函数调.<sup>[[link](#percent-literal-delimiters)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     %w[date locale]
     %w{date locale}
     %w|date locale|
 
-    # 好
+    # 正确
     %w(date locale)
     ```
 
@@ -1379,33 +1379,33 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     对于多行字符串，建议用 heredocs 语法.<sup>[[link](#percent-parens)]</sup>
 
     ```ruby
-    # 不好 - 不需要字符串插值
+    # 错误 - 不需要字符串插值
     %(<div class="text">Some text</div>)
     # 直接 '<div class="text">Some text</div>' 就行了
 
-    # 不好 - 无双引号
+    # 错误 - 无双引号
     %(This is #{quality} style)
     # 直接 "This is #{quality} style" 就行了
 
-    # 不好 - 多行了
+    # 错误 - 多行了
     %(<div>\n<span class="big">#{exclamation}</span>\n</div>)
     # 应该用 heredoc.
 
-    # 好 - 需要字符串插值, 有双引号, 单行.
+    # 正确 - 需要字符串插值, 有双引号, 单行.
     %(<tr><td class="name">#{name}</td>)
     ```
 
 * <a name="percent-r"></a>仅在需要匹配 *多于一个* '/'符号的时候使用 `%r`.<sup>[[link](#percent-r)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     %r(\s+)
 
     # 依然不好
     %r(^/(.*)$)
     # should be /^\/(.*)$/
 
-    # 好
+    # 正确
     %r(^/blog/2011/(.*)$)
     ```
 
@@ -1413,10 +1413,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#percent-x)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     date = %x(date)
 
-    # 好
+    # 正确
     date = `date`
     echo = %x(echo `date`)
     ```
@@ -1427,17 +1427,17 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#next-line-return)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     render :text => 'Howdy' and return
 
-    # 好
+    # 正确
     render :text => 'Howdy'
     return
 
     # still bad
     render :text => 'Howdy' and return if foo.present?
 
-    # 好
+    # 正确
     if foo.present?
       render :text => 'Howdy'
       return
@@ -1450,10 +1450,10 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     <sup>[[link](#scope-lambda)]</sup>
 
     ```ruby
-    # 不好
+    # 错误
     scope :foo, where(:bar => 1)
 
-    # 好
+    # 正确
     scope :foo, -> { where(:bar => 1) }
     ```
 
