@@ -11,7 +11,7 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript]。
     1. [缩进 (Indentation)](#缩进-indentation)
     1. [行内 (Inline)](#行内-inline)
     1. [换行 (Newlines)](#换行-newlines)
-  1. [行宽 (Line Length)](#行宽-line-length)
+  1. [行宽 (Line Length)](#行宽-line-length)han
   1. [注释 (Commenting)](#注释-commenting)
     1. [文件级/类级 注释 (File/class-level comments)](#文件类-级别的注释-fileclass-level-comments)
     1. [函数注释 (Function comments)](#函数注释-function-comments)
@@ -1358,7 +1358,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 ## 百分比字面量 (Percent Literals)
 
 * <a name="percent-literal-delimiters"></a>统一用圆括号，不要用其他括号，
-   因为它的行为更接近于一个函数调.<sup>[[link](#percent-literal-delimiters)]</sup>
+   因为它的行为更接近于一个函数调用。<sup>[[link](#percent-literal-delimiters)]</sup>
 
     ```ruby
     # 错误
@@ -1377,7 +1377,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     ```
 
 * <a name="percent-parens"></a>在一个单行字符串里需要 插值(interpolation) 和内嵌双引号时使用 `%()`。
-    对于多行字符串，建议用 heredocs 语法.<sup>[[link](#percent-parens)]</sup>
+    对于多行字符串，建议用 heredocs 语法。<sup>[[link](#percent-parens)]</sup>
 
     ```ruby
     # 错误 - 不需要字符串插值
