@@ -11,7 +11,7 @@ Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript]。
     1. [缩进 (Indentation)](#缩进-indentation)
     1. [行内 (Inline)](#行内-inline)
     1. [换行 (Newlines)](#换行-newlines)
-  1. [行宽 (Line Length)](#行宽-line-length)han
+  1. [行宽 (Line Length)](#行宽-line-length)
   1. [注释 (Commenting)](#注释-commenting)
     1. [文件级/类级 注释 (File/class-level comments)](#文件类-级别的注释-fileclass-level-comments)
     1. [函数注释 (Function comments)](#函数注释-function-comments)
