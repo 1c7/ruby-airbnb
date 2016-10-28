@@ -1133,6 +1133,18 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     raise MyExplicitError
     ```
 
+* <a name="exception-class-messages"></a>尽量将异常的类和讯息两个分开作为 `raise` 的参数，而不是提供异常的实例。<sup>[[link](#exception-class-messages)]</sup>
+
+    ```ruby
+    # 错误
+    raise SomeException.new('message')
+    # 注意，提供异常的实例没办法做到 `raise SomeException.new('message'), backtrace`.
+
+    # 正确
+    raise SomeException, 'message'
+    # 可以达到 `raise SomeException, 'message', backtrace`.
+    ```
+
 * <a name="rescue-as-modifier"></a>避免使用 rescue 的变异形式。
     <sup>[[link](#rescue-as-modifier)]</sup>
 
