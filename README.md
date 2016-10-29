@@ -1133,6 +1133,18 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
     raise MyExplicitError
     ```
 
+* <a name="exception-class-messages"></a>尽量将异常的类和讯息两个分开作为 `raise` 的参数，而不是提供异常的实例。<sup>[[link](#exception-class-messages)]</sup>
+
+    ```ruby
+    # 错误
+    raise SomeException.new('message')
+    # 注意，提供异常的实例没办法做到 `raise SomeException.new('message'), backtrace`.
+
+    # 正确
+    raise SomeException, 'message'
+    # 可以达到 `raise SomeException, 'message', backtrace`.
+    ```
+
 * <a name="rescue-as-modifier"></a>避免使用 rescue 的变异形式。
     <sup>[[link](#rescue-as-modifier)]</sup>
 
@@ -1474,7 +1486,7 @@ TODO 应该全大写, 然后是写这个注释的人名, 用圆括号括起来, 
 [airbnb-javascript]: https://github.com/airbnb/javascript
 [bbatsov-ruby]: https://github.com/bbatsov/ruby-style-guide
 [github-ruby]: https://github.com/styleguide/ruby
-[google-c++]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
-[google-c++-comments]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml#Comments
-[google-python-comments]: http://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Comments
+[google-c++]: https://google.github.io/styleguide/cppguide.html
+[google-c++-comments]: https://google.github.io/styleguide/cppguide.html#Comments
+[google-python-comments]: https://google.github.io/styleguide/pyguide.html#Comments
 [ruby-naming-bang]: http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist
