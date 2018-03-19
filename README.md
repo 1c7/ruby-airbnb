@@ -1,10 +1,10 @@
 # Ruby 代码风格指南
 
-这是 Airbnb 的 Ruby 代码风格指南。
+这是 Airbnb 的 Ruby 代码风格指南
 
-这份指南的灵感来自于 [Github 的指南](https://web.archive.org/web/20160410033955/https://github.com/styleguide/ruby) 和 [Bozhidar Batsov 的指南][bbatsov-ruby]。
+指南灵感来自于 [Github 的指南](https://web.archive.org/web/20160410033955/https://github.com/styleguide/ruby) 和 [Bozhidar Batsov 的指南][bbatsov-ruby]
 
-Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript]。
+Airbnb 也在维护 [JavaScript 风格指南][airbnb-javascript]
 
 ## 内容表 (Table of Contents)
   1. [空格 (Whitespace)](#空格-whitespace)
